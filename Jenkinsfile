@@ -4,12 +4,12 @@
 pipeline {
     agent none
     stages {
-        stage('Check python syntax') {
+        /*stage('Check python syntax') {
             agent { docker { image 'eeacms/pylint' } }
             steps {
                 sh 'pylint  \${WORKSPACE}/simple_api/student_age.py'
             }
-        }
+        }*/
         stage('Check docker-compose syntax') {
             agent { docker { image 'docker/compose' } }
             steps {
